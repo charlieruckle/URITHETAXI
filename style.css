@@ -179,6 +179,18 @@ button[aria-label="Open menu"]{
   display: none !important;
 }
 
+.nav-toggle{
+  display:none;
+  border:1px solid rgba(var(--blue-rgb),.35);
+  background:rgba(var(--blue-rgb),.12);
+  color:var(--azure-dark);
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:13px;
+  cursor:pointer;
+}
+
 /* ===============================
    BUTTONS
 ================================ */
@@ -1719,26 +1731,6 @@ footer{
     padding:56px 0;
   }
 
-  .nav-wrap{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-  }
-
-  .brand-logo{
-    height:44px;
-  }
-
-  .top-nav{
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
-  .top-nav a{
-    font-size:13px;
-    padding:8px 10px;
-  }
-
   .hero-inner{
     padding:88px 0 96px;
   }
@@ -1783,6 +1775,42 @@ footer{
   }
 }
 
+@media (max-width:600px){
+  .nav-wrap{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .brand-logo{
+    height:44px;
+  }
+
+  .nav-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .top-nav{
+    width:100%;
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+    padding:8px 0 4px;
+  }
+
+  .top-nav a{
+    font-size:13px;
+    padding:8px 10px;
+  }
+
+  .site-header.nav-open .top-nav{
+    display:flex;
+  }
+}
+
 @media (max-width:480px){
   .brand-logo{
     height:40px;
@@ -1811,5 +1839,34 @@ footer{
 
   .donation-hero h2{
     font-size:22px;
+  }
+
+  .legacy-timeline{
+    padding-left:0;
+  }
+
+  .legacy-timeline::before{
+    left:12px;
+  }
+
+  .legacy-row{
+    grid-template-columns:24px minmax(0,1fr);
+    margin:18px 0;
+  }
+
+  .legacy-marker{
+    padding-top:6px;
+  }
+
+  .legacy-card{
+    padding:16px 16px 18px;
+  }
+
+  .legacy-label{
+    letter-spacing:1.4px;
+  }
+
+  .legacy-date{
+    font-size:17px;
   }
 }

@@ -15,7 +15,11 @@
       <img class="brand-logo" src="photos/headImage.png" alt="Theta Xi Delta Gamma Chapter">
     </a>
 
-    <nav class="top-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      Menu
+    </button>
+
+    <nav id="primary-nav" class="top-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="recruitment.html">Recruitment</a>
@@ -187,5 +191,16 @@
     </div>
   </footer>
 
+  <script>
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".nav-toggle");
+
+    if (header && toggle) {
+      toggle.addEventListener("click", () => {
+        const isOpen = header.classList.toggle("nav-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+  </script>
 </body>
 </html>
