@@ -395,7 +395,7 @@ button[aria-label="Open menu"]{
 .life-image.slide-1{
   background-image:
     linear-gradient(135deg, rgba(6,14,26,0.45), rgba(6,14,26,0.1)),
-    url("photos/brotherhood.jpg");
+    url("photos/index.jpg");
   background-size:cover, cover;
 }
 
@@ -1777,13 +1777,15 @@ footer{
 
 @media (max-width:600px){
   .nav-wrap{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
   }
 
   .brand-logo{
-    height:44px;
+    height:40px;
   }
 
   .nav-toggle{
@@ -1871,7 +1873,7 @@ footer{
 
 @media (max-width:480px){
   .brand-logo{
-    height:40px;
+    height:36px;
   }
 
   .top-nav{
